@@ -43,8 +43,7 @@ public class RandomPaddingFilter implements Filter {
     public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws ServletException, IOException {
         HttpServletResponse response = (HttpServletResponse) res;
         chain.doFilter(req, res);
-        Cookie cookie = new Cookie("X-NO-BREACH", randomLengthString());
-        response.addCookie(cookie);
+        response.addHeader("X-NO-BREACH", randomLengthString());
     }
 
     public void destroy() {
