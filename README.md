@@ -12,6 +12,11 @@
 	</init-param>
 </filter>
 
+<filter-mapping>
+	<filter-name>NoBreach</filter-name>
+	<url-pattern>/*</url-pattern>
+</filter-mapping>
+
 ```
 
 
